@@ -462,9 +462,12 @@ section {
     max-width: 400px;
     height: 400px;
     object-fit: cover;
+    object-position: center;
     border-radius: 10px;
     box-shadow: var(--shadow-lg);
     border: none;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Fallback for placeholder */
@@ -1079,6 +1082,20 @@ section {
     
     .about-image {
         text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .about-image .doctor-photo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 300px;
+        max-height: 400px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        display: block;
     }
     
     .about-image .doctor-image-placeholder {
@@ -1450,9 +1467,21 @@ section {
         font-size: 28px;
     }
     
+    .about-image {
+        margin-bottom: 30px;
+    }
+    
     .about-image .doctor-photo {
         max-width: 100%;
-        height: 300px;
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        max-height: 400px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        display: block;
     }
     
     .about-image .doctor-image-placeholder {
@@ -1703,8 +1732,21 @@ section {
         font-size: 60px;
     }
     
+    .about-image {
+        margin-bottom: 25px;
+    }
+    
     .about-image .doctor-photo {
-        height: 250px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 250px;
+        max-height: 350px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: block;
     }
     
     .about-image .doctor-image-placeholder {
