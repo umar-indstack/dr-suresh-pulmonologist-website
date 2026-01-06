@@ -4,13 +4,16 @@ A modern, responsive website for Dr. Suresh Kumar Devaraj, Assistant Professor &
 
 ## Features
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean and professional design with smooth animations
-- **SEO Optimized**: Built with SEO best practices in mind
-- **Contact Forms**: Easy appointment booking system
-- **FAQ Section**: Interactive accordion-style FAQ
+- **Responsive Design**: Fully responsive and optimized for desktop, tablet, and mobile devices
+- **Modern UI/UX**: Clean and professional design with smooth animations and hover effects
+- **SEO Optimized**: Built with SEO best practices including meta tags and semantic HTML
+- **Contact Forms**: Easy appointment booking system with form validation
+- **FAQ Section**: Interactive accordion-style FAQ for common questions
+- **Gallery Section**: Image gallery showcasing clinic and facilities
 - **Service Showcase**: Comprehensive display of treatments and services
-- **Mobile Menu**: Hamburger menu for mobile navigation
+- **Mobile Menu**: Hamburger menu with smooth transitions for mobile navigation
+- **Social Media Integration**: Instagram link to @dr.suresh_pulmo_pearls
+- **Smooth Scrolling**: Enhanced navigation with smooth scroll behavior
 
 ## Technologies Used
 
@@ -54,9 +57,17 @@ You can deploy this website to any static hosting service:
 ```
 doctor/
 ├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
+├── styles.css          # All CSS styles (responsive design)
 ├── script.js           # JavaScript functionality
-└── README.md           # This file
+├── README.md           # This file
+└── images/             # Image assets
+    ├── hero.png        # Hero section image
+    ├── photo.png       # Doctor's photo
+    ├── treatment-1.png # Gallery image 1
+    ├── treatment-2.png # Gallery image 2
+    ├── treatment-3.png # Gallery image 3
+    ├── treatment-4.png # Gallery image 4
+    └── README.md       # Image directory documentation
 ```
 
 ## Customization
@@ -66,7 +77,9 @@ doctor/
 Edit the contact details in `index.html`:
 - Phone number: Search for `7200603928` and replace
 - Email: Search for `suri1154@gmail.com` and replace
-- Location: Search for `Kanchipuram, Tamil Nadu` and update
+- Location: Search for `Near Upashana Hotel, Kanchipuram, Tamil Nadu` and update
+- Clinic Hours: Search for `6:00 PM - 8:30 PM` and update
+- Instagram: Update the Instagram link in the social links section
 
 ### Update Doctor Information
 
@@ -86,20 +99,24 @@ Edit the CSS variables in `styles.css`:
 }
 ```
 
-### Add Doctor Photo
+### Update Images
 
-Replace the placeholder icon with an actual photo:
-1. Add your image file to the project folder
-2. In `index.html`, replace:
-   ```html
-   <div class="doctor-image-placeholder">
-       <i class="fas fa-user-md"></i>
-   </div>
-   ```
-   With:
-   ```html
-   <img src="path-to-your-image.jpg" alt="Dr. Suresh Kumar Devaraj">
-   ```
+The website uses the following images (located in the `images/` folder):
+
+1. **Hero Image** (`hero.png`): Displayed in the hero section
+   - Update path in `index.html` line ~82
+
+2. **Doctor Photo** (`photo.png`): Used in hero and about sections
+   - Update path in `index.html` lines ~82 and ~124
+
+3. **Gallery Images** (`treatment-1.png` through `treatment-4.png`): 
+   - Used in the Gallery section
+   - Update paths in `index.html` Gallery section
+
+To replace images:
+1. Add your new image files to the `images/` folder
+2. Update the `src` attributes in `index.html` to point to your new images
+3. Ensure images are optimized for web (recommended: JPG or PNG format)
 
 ## Browser Support
 
@@ -113,25 +130,29 @@ Replace the placeholder icon with an actual photo:
 
 ### Sections Included
 
-1. **Header & Navigation**: Sticky header with smooth navigation
-2. **Hero Section**: Eye-catching introduction with call-to-action
-3. **About Doctor**: Detailed information about Dr. Devaraj
-4. **Consultation Timings**: Available hours display
-5. **Treatments**: Comprehensive list of services offered
-6. **Services/Facilities**: Diagnostic and treatment facilities
-7. **Why Choose**: Benefits of choosing this doctor
-8. **Appointment Booking**: Contact form for appointments
-9. **FAQ**: Frequently asked questions with accordion
-10. **Footer**: Contact information and quick links
+1. **Header & Navigation**: Sticky header with smooth navigation and social media links
+2. **Hero Section**: Eye-catching introduction with doctor's photo and call-to-action
+3. **About Doctor**: Detailed information about Dr. Devaraj with credentials and specializations
+4. **Consultation Timings**: Clinic hours (6:00 PM - 8:30 PM) and location details
+5. **Treatments**: Comprehensive list of services offered (Asthma, TB, Sleep Disorders, etc.)
+6. **Gallery**: Image gallery showcasing clinic and facilities (4 images)
+7. **Services/Facilities**: Diagnostic and treatment facilities (PFT, Allergy Testing, etc.)
+8. **Why Choose**: Benefits of choosing this doctor
+9. **Appointment Booking**: Contact form for appointments with validation
+10. **FAQ**: Frequently asked questions with interactive accordion
+11. **Footer**: Contact information, quick links, and social media
 
 ### Interactive Features
 
-- Smooth scrolling navigation
-- Mobile-responsive hamburger menu
-- FAQ accordion functionality
-- Form validation
-- Hover effects and animations
-- Active link highlighting on scroll
+- **Smooth Scrolling**: Smooth navigation between sections
+- **Mobile Menu**: Responsive hamburger menu with backdrop overlay
+- **FAQ Accordion**: Expandable/collapsible FAQ items
+- **Form Validation**: Appointment form with client-side validation
+- **Hover Effects**: Interactive hover effects on cards and buttons
+- **Active Link Highlighting**: Navigation links highlight based on scroll position
+- **Image Gallery**: Responsive image gallery with hover zoom effects
+- **Floating Appointment Button**: Fixed button for quick appointment access
+- **Social Media Links**: Direct links to Instagram and other social platforms
 
 ## Contact Information
 
@@ -141,6 +162,9 @@ Kanchipuram, Tamil Nadu
 
 - **Phone**: 7200603928
 - **Email**: suri1154@gmail.com
+- **Location**: Near Upashana Hotel, Kanchipuram, Tamil Nadu
+- **Clinic Hours**: 6:00 PM - 8:30 PM
+- **Instagram**: [@dr.suresh_pulmo_pearls](https://www.instagram.com/dr.suresh_pulmo_pearls/)
 
 ## License
 
@@ -152,5 +176,18 @@ For any issues or questions about this website, please contact the development t
 
 ---
 
-**Note**: Remember to update the form submission handler in `script.js` if you want to integrate with a backend service or email service provider for handling appointment requests.
+## Recent Updates
+
+- Added Gallery section with 4 images
+- Integrated Instagram social media link
+- Updated location details (Near Upashana Hotel)
+- Added clinic hours (6:00 PM - 8:30 PM)
+- Improved mobile responsiveness for all sections
+- Enhanced image display with proper responsive sizing
+
+## Notes
+
+- **Form Submission**: The appointment form currently uses a mailto link. To integrate with a backend service or email service provider, update the form submission handler in `script.js` (around line 58-95).
+- **Images**: All images should be optimized for web use. Recommended formats: JPG for photos, PNG for graphics with transparency.
+- **Social Media**: Instagram link is configured. Update other social media links (Facebook, Twitter, LinkedIn) in the header section if needed.
 
