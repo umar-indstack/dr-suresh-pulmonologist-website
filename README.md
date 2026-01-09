@@ -187,7 +187,13 @@ For any issues or questions about this website, please contact the development t
 
 ## Notes
 
-- **Form Submission**: The appointment form currently uses a mailto link. To integrate with a backend service or email service provider, update the form submission handler in `script.js` (around line 58-95).
+- **Form Submission**: The appointment form automatically sends submissions to:
+  - **Email**: suri1154@gmail.com (via mailto link)
+  - **WhatsApp**: 7200603928 (opens WhatsApp with formatted message)
+  
+  Both email and WhatsApp windows open when form is submitted. The form data is formatted and sent automatically. Check your email inbox and WhatsApp messages for new appointment requests.
+
 - **Images**: All images should be optimized for web use. Recommended formats: JPG for photos, PNG for graphics with transparency.
-- **Social Media**: Instagram link is configured. Update other social media links (Facebook, Twitter, LinkedIn) in the header section if needed.
+
+- **Social Media**: Instagram link is configured (@dr.suresh_pulmo_pearls). Update other social media links (Facebook, Twitter, LinkedIn) in the header section if needed.
 
