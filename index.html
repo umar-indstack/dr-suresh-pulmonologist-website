@@ -334,17 +334,20 @@
                     <p>Schedule your consultation with Dr. Suresh Kumar Devaraj</p>
                     <form class="appointment-form" id="appointmentForm">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="name" id="appointmentName" placeholder="Your Name *" required minlength="2">
+                            <span class="error-message" id="nameError"></span>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                            <input type="tel" name="phone" id="appointmentPhone" placeholder="Phone Number *" required pattern="[0-9]{10}" minlength="10" maxlength="10">
+                            <span class="error-message" id="phoneError"></span>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email Address">
+                            <input type="email" name="email" id="appointmentEmail" placeholder="Email Address">
+                            <span class="error-message" id="emailError"></span>
                         </div>
                         <div class="form-group">
-                            <select name="service" required>
-                                <option value="">Select Service</option>
+                            <select name="service" id="appointmentService" required>
+                                <option value="">Select Service *</option>
                                 <option value="asthma">Asthma</option>
                                 <option value="tuberculosis">Tuberculosis</option>
                                 <option value="sleep-disorders">Sleep Disorders</option>
@@ -352,11 +355,31 @@
                                 <option value="breathlessness">Breathlessness</option>
                                 <option value="general">General Consultation</option>
                             </select>
+                            <span class="error-message" id="serviceError"></span>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Your Message (Optional)" rows="4"></textarea>
+                            <input type="date" name="preferredDate" id="appointmentDate" min="">
+                            <span class="error-message" id="dateError"></span>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit Appointment Request</button>
+                        <div class="form-group">
+                            <select name="preferredTime" id="appointmentTime">
+                                <option value="">Preferred Time (Optional)</option>
+                                <option value="6:00 PM">6:00 PM</option>
+                                <option value="6:30 PM">6:30 PM</option>
+                                <option value="7:00 PM">7:00 PM</option>
+                                <option value="7:30 PM">7:30 PM</option>
+                                <option value="8:00 PM">8:00 PM</option>
+                                <option value="8:30 PM">8:30 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="appointmentMessage" placeholder="Your Message (Optional)" rows="4"></textarea>
+                        </div>
+                        <div id="formMessage" class="form-message"></div>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span class="btn-text">Submit Appointment Request</span>
+                            <span class="btn-loader" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                        </button>
                     </form>
                 </div>
                 <div class="contact-info">
@@ -525,5 +548,4 @@
     <script src="script.js"></script>
 </body>
 </html>
-
 
