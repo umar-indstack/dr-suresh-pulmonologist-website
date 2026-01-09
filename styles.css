@@ -829,7 +829,8 @@ section {
     background: rgba(255,255,255,0.1);
     color: var(--white);
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background 0.3s;
+    width: 100%;
 }
 
 .form-group input::placeholder,
@@ -845,9 +846,80 @@ section {
     background: rgba(255,255,255,0.15);
 }
 
+.form-group input:invalid:not(:focus):not(:placeholder-shown),
+.form-group select:invalid:not(:focus) {
+    border-color: rgba(255,107,107,0.7);
+}
+
+.form-group input:valid:not(:focus):not(:placeholder-shown),
+.form-group select:valid:not(:focus) {
+    border-color: rgba(76,175,80,0.7);
+}
+
 .form-group select option {
     background: var(--primary-color);
     color: var(--white);
+}
+
+.form-group input[type="date"] {
+    color-scheme: dark;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #ffeb3b;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+    padding-left: 5px;
+}
+
+.form-group:has(.error-message:not(:empty)) input,
+.form-group:has(.error-message:not(:empty)) select {
+    border-color: #ffeb3b;
+}
+
+.form-message {
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.form-message.success {
+    background: rgba(76,175,80,0.2);
+    border: 1px solid rgba(76,175,80,0.5);
+    color: #a5d6a7;
+}
+
+.form-message.error {
+    background: rgba(244,67,54,0.2);
+    border: 1px solid rgba(244,67,54,0.5);
+    color: #ef9a9a;
+}
+
+.form-message.info {
+    background: rgba(33,150,243,0.2);
+    border: 1px solid rgba(33,150,243,0.5);
+    color: #90caf9;
+}
+
+#submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-loader {
+    display: inline-block;
+    margin-left: 10px;
 }
 
 .contact-info {
